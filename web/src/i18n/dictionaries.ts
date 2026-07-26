@@ -257,6 +257,10 @@ type Dict = {
         updateWarningA: string;
         updateWarningB: string;
         statusDesc: string;
+        rollbackDesc: string;
+        rollbackBehavior1: string;
+        rollbackBehavior2: string;
+        rollbackBehavior3: string;
         outputIncludesTitle: string;
         statusOut1: string;
         statusOut2: string;
@@ -277,11 +281,17 @@ type Dict = {
         optDryRunA: string;
         optDryRunB: string;
         optDryRunC: string;
+        optStrategyDesc: string;
+        optNoBackupDesc: string;
+        optConflictReportDesc: string;
         examplesTitle: string;
         exForceReinstall: string;
         exInstallDir: string;
         exDevBranch: string;
         exSilentCI: string;
+        exPreviewUpdate: string;
+        exReplace: string;
+        exRollbackLatest: string;
         nextTitle: string;
         installGuideArrow: string;
         installGuideDesc: string;
@@ -517,7 +527,7 @@ export const dictionaries: Record<Locale, Dict> = {
             structureTitle: "What Gets Installed",
             structureP: "After running the installation command, you'll have the following structure:",
             agentDirDesc: "Contains 20 specialist AI agent configurations for different domains (frontend, backend, security, etc.)",
-            skillsDirDesc: "45 domain-specific knowledge modules that agents can use",
+            skillsDirDesc: "47 domain-specific knowledge modules that agents can use",
             workflowsDirDesc: "13 slash command procedures for common development tasks",
             rulesDirDescA: "Workspace configuration including ",
             rulesDirDescB: " for behavior rules",
@@ -530,7 +540,7 @@ export const dictionaries: Record<Locale, Dict> = {
             agentsArrow: "Agents →",
             agentsArrowDesc: "Learn about specialist AI agents",
             skillsArrow: "Skills →",
-            skillsArrowDesc: "Discover 45 domain-specific skills",
+            skillsArrowDesc: "Discover 47 domain-specific skills",
             footerIntroduction: "Introduction",
             footerAgents: "Agents",
         },
@@ -557,6 +567,10 @@ export const dictionaries: Record<Locale, Dict> = {
             updateWarningA: " This will delete and replace your ",
             updateWarningB: " folder. Make sure to backup any custom changes.",
             statusDesc: "Check the current installation status and check npm for a newer release.",
+            rollbackDesc: "Restore a pre-update backup of the managed tree. Defaults to the newest backup; pick one with --backup <id>.",
+            rollbackBehavior1: "Lists available backups and restores the selected one",
+            rollbackBehavior2: "Backs up the current tree first (disable with --no-keep-current)",
+            rollbackBehavior3: "Preview which backup would be restored with --dry-run",
             outputIncludesTitle: "Output Includes",
             statusOut1: "CLI version",
             statusOut2: "Installation status (installed/not installed)",
@@ -577,11 +591,17 @@ export const dictionaries: Record<Locale, Dict> = {
             optDryRunA: "Preview actions without executing (",
             optDryRunB: " / ",
             optDryRunC: ")",
+            optStrategyDesc: "Update strategy: merge preserves local changes; replace restores the upstream tree",
+            optNoBackupDesc: "Skip the automatic pre-update backup",
+            optConflictReportDesc: "Write the update/conflict report to a custom path",
             examplesTitle: "Examples",
             exForceReinstall: "Force reinstall",
             exInstallDir: "Install in specific directory",
             exDevBranch: "Use development branch",
             exSilentCI: "Silent install for CI/CD",
+            exPreviewUpdate: "Preview an update without applying it",
+            exReplace: "Restore the pristine upstream tree",
+            exRollbackLatest: "Roll back to the newest backup",
             nextTitle: "Next Steps",
             installGuideArrow: "Installation Guide →",
             installGuideDesc: "Full installation instructions",
@@ -804,7 +824,7 @@ export const dictionaries: Record<Locale, Dict> = {
             structureTitle: "Những gì được cài đặt",
             structureP: "Sau khi chạy lệnh cài đặt, bạn sẽ có cấu trúc sau:",
             agentDirDesc: "Chứa 20 cấu hình AI agent chuyên biệt cho các lĩnh vực khác nhau (frontend, backend, bảo mật, v.v.)",
-            skillsDirDesc: "45 mô-đun kiến thức theo lĩnh vực mà agent có thể sử dụng",
+            skillsDirDesc: "47 mô-đun kiến thức theo lĩnh vực mà agent có thể sử dụng",
             workflowsDirDesc: "13 thủ tục lệnh gạch chéo cho những tác vụ phát triển thường gặp",
             rulesDirDescA: "Cấu hình workspace bao gồm ",
             rulesDirDescB: " cho các quy tắc hành vi",
@@ -817,7 +837,7 @@ export const dictionaries: Record<Locale, Dict> = {
             agentsArrow: "Agents →",
             agentsArrowDesc: "Tìm hiểu về các AI agent chuyên biệt",
             skillsArrow: "Kỹ năng →",
-            skillsArrowDesc: "Khám phá 45 kỹ năng theo lĩnh vực",
+            skillsArrowDesc: "Khám phá 47 kỹ năng theo lĩnh vực",
             footerIntroduction: "Giới thiệu",
             footerAgents: "Agents",
         },
@@ -844,6 +864,10 @@ export const dictionaries: Record<Locale, Dict> = {
             updateWarningA: " Thao tác này sẽ xóa và thay thế thư mục ",
             updateWarningB: " của bạn. Hãy đảm bảo sao lưu mọi thay đổi tùy chỉnh.",
             statusDesc: "Kiểm tra trạng thái cài đặt hiện tại và kiểm tra npm xem có bản phát hành mới hơn không.",
+            rollbackDesc: "Khôi phục bản sao lưu trước khi cập nhật của cây được quản lý. Mặc định dùng bản sao lưu mới nhất; chọn bản khác với --backup <id>.",
+            rollbackBehavior1: "Liệt kê các bản sao lưu có sẵn và khôi phục bản được chọn",
+            rollbackBehavior2: "Sao lưu cây hiện tại trước (tắt bằng --no-keep-current)",
+            rollbackBehavior3: "Xem trước bản sao lưu sẽ được khôi phục với --dry-run",
             outputIncludesTitle: "Đầu ra bao gồm",
             statusOut1: "Phiên bản CLI",
             statusOut2: "Trạng thái cài đặt (đã cài/chưa cài)",
@@ -864,11 +888,17 @@ export const dictionaries: Record<Locale, Dict> = {
             optDryRunA: "Xem trước các hành động mà không thực thi (",
             optDryRunB: " / ",
             optDryRunC: ")",
+            optStrategyDesc: "Chiến lược cập nhật: merge giữ thay đổi cục bộ; replace khôi phục cây upstream",
+            optNoBackupDesc: "Bỏ qua sao lưu tự động trước khi cập nhật",
+            optConflictReportDesc: "Ghi báo cáo cập nhật/xung đột vào đường dẫn tùy chỉnh",
             examplesTitle: "Ví dụ",
             exForceReinstall: "Cài đặt lại bắt buộc",
             exInstallDir: "Cài đặt vào thư mục cụ thể",
             exDevBranch: "Dùng nhánh phát triển",
             exSilentCI: "Cài đặt im lặng cho CI/CD",
+            exPreviewUpdate: "Xem trước bản cập nhật mà không áp dụng",
+            exReplace: "Khôi phục cây gốc từ upstream",
+            exRollbackLatest: "Quay lại bản sao lưu mới nhất",
             nextTitle: "Bước tiếp theo",
             installGuideArrow: "Hướng dẫn cài đặt →",
             installGuideDesc: "Hướng dẫn cài đặt đầy đủ",
@@ -1091,7 +1121,7 @@ export const dictionaries: Record<Locale, Dict> = {
             structureTitle: "安装内容",
             structureP: "运行安装命令后，你将获得以下结构：",
             agentDirDesc: "包含 20 个面向不同领域（前端、后端、安全等）的专业 AI agent 配置",
-            skillsDirDesc: "45 个 agent 可使用的特定领域知识模块",
+            skillsDirDesc: "47 个 agent 可使用的特定领域知识模块",
             workflowsDirDesc: "13 个用于常见开发任务的斜杠命令流程",
             rulesDirDescA: "工作区配置，包含 ",
             rulesDirDescB: " 用于行为规则",
@@ -1104,7 +1134,7 @@ export const dictionaries: Record<Locale, Dict> = {
             agentsArrow: "Agents →",
             agentsArrowDesc: "了解专业 AI agent",
             skillsArrow: "技能 →",
-            skillsArrowDesc: "探索 45 个特定领域技能",
+            skillsArrowDesc: "探索 47 个特定领域技能",
             footerIntroduction: "简介",
             footerAgents: "Agents",
         },
@@ -1131,6 +1161,10 @@ export const dictionaries: Record<Locale, Dict> = {
             updateWarningA: " 此操作将删除并替换你的 ",
             updateWarningB: " 文件夹。请务必备份任何自定义更改。",
             statusDesc: "检查当前安装状态，并查询 npm 是否有更新的版本。",
+            rollbackDesc: "恢复更新前的托管目录备份。默认使用最新备份；可用 --backup <id> 指定。",
+            rollbackBehavior1: "列出可用备份并恢复所选备份",
+            rollbackBehavior2: "先备份当前目录（可用 --no-keep-current 关闭）",
+            rollbackBehavior3: "使用 --dry-run 预览将恢复哪个备份",
             outputIncludesTitle: "输出包括",
             statusOut1: "CLI 版本",
             statusOut2: "安装状态（已安装/未安装）",
@@ -1151,11 +1185,17 @@ export const dictionaries: Record<Locale, Dict> = {
             optDryRunA: "预览操作而不实际执行（",
             optDryRunB: " / ",
             optDryRunC: "）",
+            optStrategyDesc: "更新策略：merge 保留本地更改；replace 恢复上游目录",
+            optNoBackupDesc: "跳过更新前的自动备份",
+            optConflictReportDesc: "将更新/冲突报告写入自定义路径",
             examplesTitle: "示例",
             exForceReinstall: "强制重新安装",
             exInstallDir: "安装到指定目录",
             exDevBranch: "使用开发分支",
             exSilentCI: "为 CI/CD 静默安装",
+            exPreviewUpdate: "预览更新而不应用",
+            exReplace: "恢复上游原始目录",
+            exRollbackLatest: "回滚到最新备份",
             nextTitle: "后续步骤",
             installGuideArrow: "安装指南 →",
             installGuideDesc: "完整的安装说明",
@@ -1378,7 +1418,7 @@ export const dictionaries: Record<Locale, Dict> = {
             structureTitle: "インストールされる内容",
             structureP: "インストールコマンドを実行すると、次の構造になります：",
             agentDirDesc: "さまざまな領域（フロントエンド、バックエンド、セキュリティなど）向けの 20 個の専門 AI agent 設定を含みます",
-            skillsDirDesc: "agent が使用できる 45 個のドメイン固有の知識モジュール",
+            skillsDirDesc: "agent が使用できる 47 個のドメイン固有の知識モジュール",
             workflowsDirDesc: "よくある開発タスク向けの 13 個のスラッシュコマンド手順",
             rulesDirDescA: "行動ルール用の ",
             rulesDirDescB: " を含むワークスペース設定",
@@ -1391,7 +1431,7 @@ export const dictionaries: Record<Locale, Dict> = {
             agentsArrow: "Agents →",
             agentsArrowDesc: "専門 AI agent について学ぶ",
             skillsArrow: "スキル →",
-            skillsArrowDesc: "45 個のドメイン固有スキルを発見する",
+            skillsArrowDesc: "47 個のドメイン固有スキルを発見する",
             footerIntroduction: "概要",
             footerAgents: "Agents",
         },
@@ -1418,6 +1458,10 @@ export const dictionaries: Record<Locale, Dict> = {
             updateWarningA: " この操作はあなたの ",
             updateWarningB: " フォルダーを削除して置き換えます。カスタム変更は必ずバックアップしてください。",
             statusDesc: "現在のインストール状況を確認し、npm で新しいリリースがあるか確認します。",
+            rollbackDesc: "更新前の管理ツリーのバックアップを復元します。デフォルトは最新のバックアップ。--backup <id> で選択できます。",
+            rollbackBehavior1: "利用可能なバックアップを一覧表示し、選択したものを復元します",
+            rollbackBehavior2: "先に現在のツリーをバックアップします（--no-keep-current で無効化）",
+            rollbackBehavior3: "--dry-run でどのバックアップが復元されるかプレビューできます",
             outputIncludesTitle: "出力に含まれるもの",
             statusOut1: "CLI バージョン",
             statusOut2: "インストール状況（インストール済み/未インストール）",
@@ -1438,11 +1482,17 @@ export const dictionaries: Record<Locale, Dict> = {
             optDryRunA: "実行せずに操作をプレビューします（",
             optDryRunB: " / ",
             optDryRunC: "）",
+            optStrategyDesc: "更新戦略：merge はローカル変更を保持、replace はアップストリームのツリーを復元",
+            optNoBackupDesc: "更新前の自動バックアップをスキップ",
+            optConflictReportDesc: "更新／競合レポートをカスタムパスに書き出し",
             examplesTitle: "例",
             exForceReinstall: "強制的に再インストール",
             exInstallDir: "指定したディレクトリにインストール",
             exDevBranch: "開発ブランチを使用",
             exSilentCI: "CI/CD 向けのサイレントインストール",
+            exPreviewUpdate: "適用せずに更新をプレビュー",
+            exReplace: "アップストリームの元のツリーを復元",
+            exRollbackLatest: "最新のバックアップへロールバック",
             nextTitle: "次のステップ",
             installGuideArrow: "インストールガイド →",
             installGuideDesc: "完全なインストール手順",

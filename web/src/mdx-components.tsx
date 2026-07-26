@@ -1,8 +1,10 @@
 import type { MDXComponents } from "mdx/types";
 import Link from "next/link";
+import MdxPre from "@/components/docs/mdx-pre";
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
+    pre: (props) => <MdxPre {...props} />,
     h1: ({ children, id }) => (
       <h1 id={id} className="text-4xl font-bold tracking-tight text-foreground mb-2 scroll-mt-20">
         {children}

@@ -1,5 +1,18 @@
 [
     {
+        "version": "2026.7.27",
+        "date": "2026-07-26",
+        "summary": "Patch release: the CLI no longer exits silently when run through an npm bin symlink (global install or npx).",
+        "changes": {
+            "Fixed": [
+                "CLI exited silently when invoked through an npm bin symlink (npx @vudovn/ag-kit init installed nothing): the entry path is now realpath-resolved before the direct-run guard comparison."
+            ],
+            "Added": [
+                "Regression test running the CLI through a bin-style symlink."
+            ]
+        }
+    },
+    {
         "version": "2026.7.26",
         "date": "2026-07-26",
         "summary": "Production candidate for the Antigravity-first runtime: native discovery, MCP planning, safety hooks, orchestration, deterministic plugin packaging, diagnostics, migration guidance, and release gates.",

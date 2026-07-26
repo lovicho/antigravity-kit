@@ -1,11 +1,10 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogClose, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 
 const X_URL = 'https://x.com/vudovn354';
-const SEEN_KEY = 'ag-kit-follow-x-dismissed';
 
 const XIcon = ({ className }: { className?: string }) => (
     <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
@@ -16,17 +15,8 @@ const XIcon = ({ className }: { className?: string }) => (
 export default function FollowDialog() {
     const [open, setOpen] = useState(false);
 
-    // Auto-open once on first visit; remember dismissal.
-    useEffect(() => {
-        if (localStorage.getItem(SEEN_KEY) !== '1') {
-            const id = setTimeout(() => setOpen(true), 800);
-            return () => clearTimeout(id);
-        }
-    }, []);
-
     const handleOpenChange = (next: boolean) => {
         setOpen(next);
-        if (!next) localStorage.setItem(SEEN_KEY, '1');
     };
 
     return (

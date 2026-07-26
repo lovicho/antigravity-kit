@@ -88,6 +88,31 @@ export default function CLIPage() {
                         </div>
                     </div>
 
+                    {/* rollback */}
+                    <div>
+                        <h3 className="text-xl font-semibold text-foreground mb-3">
+                            <code className="font-mono">ag-kit rollback</code>
+                        </h3>
+                        <p className="text-base text-muted-foreground mb-4">
+                            {t.cliPage.rollbackDesc}
+                        </p>
+
+                        <div className="relative group mb-4">
+                            <pre className="p-4 rounded-lg bg-code overflow-x-auto border border-code-border font-mono text-sm">
+                                <code className="text-code-foreground">ag-kit rollback</code>
+                            </pre>
+                        </div>
+
+                        <div className="p-4 rounded-lg border border-border bg-muted/50">
+                            <div className="text-sm font-semibold text-foreground mb-2">{t.cliPage.behaviorTitle}</div>
+                            <ul className="text-sm text-muted-foreground space-y-1">
+                                <li>• {t.cliPage.rollbackBehavior1}</li>
+                                <li>• {t.cliPage.rollbackBehavior2}</li>
+                                <li>• {t.cliPage.rollbackBehavior3}</li>
+                            </ul>
+                        </div>
+                    </div>
+
                     {/* status */}
                     <div>
                         <h3 className="text-xl font-semibold text-foreground mb-3">
@@ -175,6 +200,30 @@ export default function CLIPage() {
                                     {t.cliPage.optDryRunA}<code className="px-1 py-0.5 rounded bg-muted font-mono text-xs">init</code>{t.cliPage.optDryRunB}<code className="px-1 py-0.5 rounded bg-muted font-mono text-xs">update</code>{t.cliPage.optDryRunC}
                                 </td>
                             </tr>
+                            <tr>
+                                <td className="py-3 px-4">
+                                    <code className="font-mono text-foreground">--strategy &lt;merge|replace&gt;</code>
+                                </td>
+                                <td className="py-3 px-4 text-muted-foreground">
+                                    {t.cliPage.optStrategyDesc}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td className="py-3 px-4">
+                                    <code className="font-mono text-foreground">--no-backup</code>
+                                </td>
+                                <td className="py-3 px-4 text-muted-foreground">
+                                    {t.cliPage.optNoBackupDesc}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td className="py-3 px-4">
+                                    <code className="font-mono text-foreground">--conflict-report &lt;file&gt;</code>
+                                </td>
+                                <td className="py-3 px-4 text-muted-foreground">
+                                    {t.cliPage.optConflictReportDesc}
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -230,61 +279,46 @@ export default function CLIPage() {
                             </pre>
                         </div>
                     </div>
+
+                    <div>
+                        <h3 className="text-base font-semibold text-foreground mb-2">
+                            {t.cliPage.exPreviewUpdate}
+                        </h3>
+                        <div className="relative group">
+                            <pre className="p-4 rounded-lg bg-code overflow-x-auto border border-code-border font-mono text-sm">
+                                <code className="text-code-foreground">ag-kit update --dry-run</code>
+                            </pre>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 className="text-base font-semibold text-foreground mb-2">
+                            {t.cliPage.exReplace}
+                        </h3>
+                        <div className="relative group">
+                            <pre className="p-4 rounded-lg bg-code overflow-x-auto border border-code-border font-mono text-sm">
+                                <code className="text-code-foreground">ag-kit update --strategy replace</code>
+                            </pre>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 className="text-base font-semibold text-foreground mb-2">
+                            {t.cliPage.exRollbackLatest}
+                        </h3>
+                        <div className="relative group">
+                            <pre className="p-4 rounded-lg bg-code overflow-x-auto border border-code-border font-mono text-sm">
+                                <code className="text-code-foreground">ag-kit rollback</code>
+                            </pre>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            {/* Next Steps */}
-            <section className="mb-12">
-                <h2 className="text-2xl font-bold tracking-tight text-foreground mb-4">
-                    {t.cliPage.nextTitle}
-                </h2>
-                <div className="grid gap-4 sm:grid-cols-2">
-                    <Link
-                        href="/docs/installation"
-                        className="group p-6 rounded-lg border border-border hover:border-border hover:bg-muted transition-all"
-                    >
-                        <h3 className="font-semibold text-foreground mb-2">{t.cliPage.installGuideArrow}</h3>
-                        <p className="text-sm text-muted-foreground">
-                            {t.cliPage.installGuideDesc}
-                        </p>
-                    </Link>
-                    <a
-                        href="https://github.com/vudovn/ag-kit"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group p-6 rounded-lg border border-border hover:border-border hover:bg-muted transition-all"
-                    >
-                        <h3 className="font-semibold text-foreground mb-2">{t.cliPage.viewGithubArrow}</h3>
-                        <p className="text-sm text-muted-foreground">
-                            {t.cliPage.viewGithubDesc}
-                        </p>
-                    </a>
-                </div>
-            </section>
+            
 
-            {/* Footer Navigation */}
-            <div className="pt-8 border-t border-border flex items-center justify-between">
-                <Link
-                    href="/docs/workflows"
-                    className="text-sm font-medium text-foreground hover:underline flex items-center gap-1"
-                >
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                    </svg>
-                    {t.cliPage.footerWorkflows}
-                </Link>
-                <a
-                    href="https://github.com/vudovn/ag-kit"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm font-medium text-foreground hover:underline flex items-center gap-1"
-                >
-                    GitHub
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                </a>
-            </div>
+
+            
         </div>
     );
 }

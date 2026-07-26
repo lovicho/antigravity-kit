@@ -72,7 +72,7 @@ export default function InstallationContent() {
         <pre className="p-4 rounded-lg bg-code overflow-x-auto mb-4 text-sm font-mono text-code-foreground">
 {`.agents/
 ├── agent/           # 20 Specialist Agents
-├── skills/          # 45 Skills
+├── skills/          # 47 Skills
 ├── workflows/       # 13 Slash Commands
 ├── rules/           # Workspace Rules
 └── ARCHITECTURE.md  # Full documentation`}
@@ -132,55 +132,9 @@ export default function InstallationContent() {
         </ul>
       </section>
 
-      <section className="mb-12">
-        <h2 className="text-2xl font-bold tracking-tight text-foreground mb-4">
-          {t.installPage.nextTitle}
-        </h2>
-        <p className="text-base text-muted-foreground mb-6">
-          {t.installPage.nextP}
-        </p>
-        <div className="grid gap-4 sm:grid-cols-2">
-          <Link
-            href="/docs/agents"
-            className="group p-6 rounded-lg border border-border hover:border-border hover:bg-muted transition-all"
-          >
-            <h3 className="font-semibold text-foreground mb-2">{t.installPage.agentsArrow}</h3>
-            <p className="text-sm text-muted-foreground">
-              {t.installPage.agentsArrowDesc}
-            </p>
-          </Link>
-          <Link
-            href="/docs/skills"
-            className="group p-6 rounded-lg border border-border hover:border-border hover:bg-muted transition-all"
-          >
-            <h3 className="font-semibold text-foreground mb-2">{t.installPage.skillsArrow}</h3>
-            <p className="text-sm text-muted-foreground">
-              {t.installPage.skillsArrowDesc}
-            </p>
-          </Link>
-        </div>
-      </section>
+      
 
-      <div className="pt-8 border-t border-border flex items-center justify-between">
-        <Link
-          href="/docs"
-          className="text-sm font-medium text-foreground hover:underline flex items-center gap-1"
-        >
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
-          {t.installPage.footerIntroduction}
-        </Link>
-        <Link
-          href="/docs/agents"
-          className="text-sm font-medium text-foreground hover:underline flex items-center gap-1"
-        >
-          {t.installPage.footerAgents}
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </Link>
-      </div>
+      
     </div>
   );
 }

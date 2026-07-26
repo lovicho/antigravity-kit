@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useSyncExternalStore } from "react";
+import { createContext, useContext, useEffect, useSyncExternalStore } from "react";
 import {
     subscribe,
     getStoredLocale,
@@ -20,6 +20,11 @@ const I18nContext = createContext<I18nValue | null>(null);
 
 export function I18nProvider({ children }: { children: React.ReactNode }) {
     const locale = useSyncExternalStore(subscribe, getStoredLocale, getServerLocale);
+
+    // Keep <html lang> in sync so screen readers pick the right language.
+    useEffect(() => {
+        document.documentElement.lang = locale;
+    }, [locale]);
 
     const value: I18nValue = {
         locale,

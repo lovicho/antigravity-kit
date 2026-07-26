@@ -138,54 +138,10 @@ You are a senior frontend architect...`}</code>
                 </p>
             </section>
 
-            {/* Next Steps */}
-            <section className="mb-12">
-                <h2 className="text-2xl font-bold tracking-tight text-foreground mb-4">
-                    {t.agentsPage.nextTitle}
-                </h2>
-                <div className="grid gap-4 sm:grid-cols-2">
-                    <Link
-                        href="/docs/skills"
-                        className="group p-6 rounded-lg border border-border hover:border-border hover:bg-muted transition-all"
-                    >
-                        <h3 className="font-semibold text-foreground mb-2">{t.agentsPage.skillsArrow}</h3>
-                        <p className="text-sm text-muted-foreground">
-                            {t.agentsPage.skillsArrowDesc}
-                        </p>
-                    </Link>
-                    <Link
-                        href="/docs/workflows"
-                        className="group p-6 rounded-lg border border-border hover:border-border hover:bg-muted transition-all"
-                    >
-                        <h3 className="font-semibold text-foreground mb-2">{t.agentsPage.workflowsArrow}</h3>
-                        <p className="text-sm text-muted-foreground">
-                            {t.agentsPage.workflowsArrowDesc}
-                        </p>
-                    </Link>
-                </div>
-            </section>
+            
 
-            {/* Footer Navigation */}
-            <div className="pt-8 border-t border-border flex items-center justify-between">
-                <Link
-                    href="/docs/installation"
-                    className="text-sm font-medium text-foreground hover:underline flex items-center gap-1"
-                >
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                    </svg>
-                    {t.agentsPage.footerInstallation}
-                </Link>
-                <Link
-                    href="/docs/skills"
-                    className="text-sm font-medium text-foreground hover:underline flex items-center gap-1"
-                >
-                    {t.agentsPage.footerSkills}
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                </Link>
-            </div>
+
+            
         </div>
     );
 }

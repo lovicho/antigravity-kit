@@ -428,8 +428,18 @@ export const runCli = async (argv = process.argv) => {
     await program.parseAsync(argv);
 };
 
+const resolveEntryHref = (entry) => {
+    try {
+        // npm installs bins as symlinks; ESM resolves the main module to its
+        // real path, so argv[1] must be realpath'd before comparing.
+        return pathToFileURL(fse.realpathSync(path.resolve(entry))).href;
+    } catch {
+        return null;
+    }
+};
+
 const isDirectRun = process.argv[1]
-    && pathToFileURL(path.resolve(process.argv[1])).href === import.meta.url;
+    && resolveEntryHref(process.argv[1]) === import.meta.url;
 
 if (isDirectRun) {
     process.on("SIGINT", async () => {

@@ -238,73 +238,50 @@ export const landingEn: LandingDictionary = {
   testimonials: {
     title: "Testimonials",
     subtitle:
-      "Hear from teams using AG Kit to ship agent skills, workflows, and safer updates.",
+      "Real feedback from the community on GitHub.",
     items: [
       {
-        name: "Sarah Chen",
-        role: "Staff Engineer",
+        name: "winniwoods",
+        role: "GitHub · #38",
         comment:
-          "Merge-safe update is the difference. We keep local skill tweaks and still pull upstream agents without rewriting the tree by hand. Shipping agent capability packs finally feels safe.",
+          "First of all, thank you for this amazing project! I've been using the Antigravity Kit and really enjoy the workflow.",
         clamp: "line-clamp-3",
       },
       {
-        name: "Marcus Rodriguez",
-        role: "Platform Lead",
+        name: "ghiemer",
+        role: "GitHub · #23",
         comment:
-          "The /brainstorm and /plan workflows gave our team a shared process instead of every agent session inventing its own steps. Our review scores improved after we wired the built-in checkers into every PR workflow.",
+          "Good work with antigravity-kit. Love it — Cheers.",
+        clamp: "line-clamp-2",
+      },
+      {
+        name: "AlexOptimizer",
+        role: "GitHub · #66",
+        comment:
+          "The project architecture and settings are configured at the highest level, utilizing modern systemic prompting and modularity practices. The separation into specialized agents and pluggable skills prevents AI context overload.",
         clamp: "line-clamp-5",
       },
       {
-        name: "Emily Watson",
-        role: "Head of Product",
+        name: "DRYN07",
+        role: "GitHub · #67",
         comment:
-          "Finally, a toolkit that developers actually want to use. Clear docs, flexible skills, and sensible defaults.",
-        clamp: "line-clamp-2",
-        className: "hidden lg:block",
-      },
-      {
-        name: "David Kim",
-        role: "Tech Lead",
-        comment:
-          "We evaluated several agent packs before settling on AG Kit. What set it apart was merge-aware updates and production-ready workflows. Every skill felt usable out of the box.",
-        clamp: "line-clamp-4",
-      },
-      {
-        name: "Rachel Foster",
-        role: "Senior Designer",
-        comment:
-          "As a designer working with AI tooling, I appreciate how consistent the docs and landing experience feel. Design-to-agent handoff has never been smoother across our team.",
+          "I have been using another skills repo so far, which has more skills, but yours seems quite well-organized, so I thought I'd give it a try.",
         clamp: "line-clamp-3",
         className: "hidden md:block",
       },
       {
-        name: "James Mitchell",
-        role: "Full Stack Developer",
+        name: "kkkasio",
+        role: "GitHub · #38",
         comment:
-          "The CLI DX is best-in-class. Dry-run updates and conflict reports catch mistakes before they hit main. I used to dread upgrading agent templates - now it takes a fraction of the time.",
-        clamp: "line-clamp-5",
-        className: "hidden lg:block",
-      },
-      {
-        name: "Nina Patel",
-        role: "Security Engineer",
-        comment:
-          "These skills handle edge cases I did not even test for. Security scanning, secret checks, and review agents are built in from the start.",
+          "I support the idea — the tool is really quite robust for new environments like Node.",
         clamp: "line-clamp-2",
-      },
-      {
-        name: "Alex Thompson",
-        role: "Engineering Manager",
-        comment:
-          "Our team's velocity increased after adopting AG Kit. Less time on prompt boilerplate means more time on features customers care about.",
-        clamp: "line-clamp-4",
         className: "hidden md:block",
       },
       {
-        name: "Henry Garcia",
-        role: "DevOps Engineer",
+        name: "pragnyanramtha",
+        role: "GitHub · #69",
         comment:
-          "We standardized agent workflows across three products in under three weeks. Rollback after a bad update saved a release day, and the docs just worked for every teammate we onboarded.",
+          "Antigravity now also supports .agents/ and it's the industry standard — helps in extensibility when I'm installing other skills.",
         clamp: "line-clamp-3",
         className: "hidden lg:block",
       },
@@ -537,73 +514,50 @@ export const landingVi: LandingDictionary = {
   testimonials: {
     title: "Đánh giá",
     subtitle:
-      "Nghe từ các đội dùng AG Kit để ship skill agent, workflow và cập nhật an toàn hơn.",
+      "Phản hồi thật từ cộng đồng trên GitHub.",
     items: [
       {
-        name: "Sarah Chen",
-        role: "Staff Engineer",
+        name: "winniwoods",
+        role: "GitHub · #38",
         comment:
-          "Cập nhật merge an toàn là điểm khác biệt. Chúng tôi giữ chỉnh sửa skill cục bộ và vẫn kéo agent upstream mà không phải viết lại cả cây file. Ship gói năng lực agent cuối cùng cũng cảm thấy an toàn.",
+          "First of all, thank you for this amazing project! I've been using the Antigravity Kit and really enjoy the workflow.",
         clamp: "line-clamp-3",
       },
       {
-        name: "Marcus Rodriguez",
-        role: "Platform Lead",
+        name: "ghiemer",
+        role: "GitHub · #23",
         comment:
-          "Workflow /brainstorm và /plan cho cả đội một quy trình chung thay vì mỗi phiên agent tự nghĩ bước. Điểm review tăng sau khi gắn checker có sẵn vào mọi PR.",
+          "Good work with antigravity-kit. Love it — Cheers.",
+        clamp: "line-clamp-2",
+      },
+      {
+        name: "AlexOptimizer",
+        role: "GitHub · #66",
+        comment:
+          "The project architecture and settings are configured at the highest level, utilizing modern systemic prompting and modularity practices. The separation into specialized agents and pluggable skills prevents AI context overload.",
         clamp: "line-clamp-5",
       },
       {
-        name: "Emily Watson",
-        role: "Head of Product",
+        name: "DRYN07",
+        role: "GitHub · #67",
         comment:
-          "Cuối cùng cũng có toolkit mà lập trình viên thực sự muốn dùng. Tài liệu rõ, skill linh hoạt, mặc định hợp lý.",
-        clamp: "line-clamp-2",
-        className: "hidden lg:block",
-      },
-      {
-        name: "David Kim",
-        role: "Tech Lead",
-        comment:
-          "Chúng tôi so sánh vài gói agent trước khi chọn AG Kit. Điểm nổi bật là cập nhật nhận biết merge và workflow sẵn sàng production. Mọi skill đều dùng được ngay.",
-        clamp: "line-clamp-4",
-      },
-      {
-        name: "Rachel Foster",
-        role: "Senior Designer",
-        comment:
-          "Là designer làm với công cụ AI, tôi thích sự nhất quán giữa tài liệu và landing. Bàn giao design-to-agent mượt hơn hẳn cho cả đội.",
+          "I have been using another skills repo so far, which has more skills, but yours seems quite well-organized, so I thought I'd give it a try.",
         clamp: "line-clamp-3",
         className: "hidden md:block",
       },
       {
-        name: "James Mitchell",
-        role: "Full Stack Developer",
+        name: "kkkasio",
+        role: "GitHub · #38",
         comment:
-          "DX của CLI thuộc hàng tốt nhất. Dry-run và báo cáo xung đột bắt lỗi trước khi lên main. Trước đây tôi ngại nâng template agent - giờ chỉ mất một phần thời gian.",
-        clamp: "line-clamp-5",
-        className: "hidden lg:block",
-      },
-      {
-        name: "Nina Patel",
-        role: "Security Engineer",
-        comment:
-          "Các skill xử lý cả edge case tôi chưa kịp test. Quét bảo mật, kiểm tra secret và agent review có sẵn từ đầu.",
+          "I support the idea — the tool is really quite robust for new environments like Node.",
         clamp: "line-clamp-2",
-      },
-      {
-        name: "Alex Thompson",
-        role: "Engineering Manager",
-        comment:
-          "Tốc độ đội tăng sau khi dùng AG Kit. Ít thời gian viết prompt lặp lại, nhiều thời gian hơn cho tính năng khách hàng cần.",
-        clamp: "line-clamp-4",
         className: "hidden md:block",
       },
       {
-        name: "Henry Garcia",
-        role: "DevOps Engineer",
+        name: "pragnyanramtha",
+        role: "GitHub · #69",
         comment:
-          "Chúng tôi chuẩn hóa workflow agent trên ba sản phẩm trong chưa đầy ba tuần. Rollback sau một bản update hỏng đã cứu một ngày release, và tài liệu dễ onboard cho mọi thành viên.",
+          "Antigravity now also supports .agents/ and it's the industry standard — helps in extensibility when I'm installing other skills.",
         clamp: "line-clamp-3",
         className: "hidden lg:block",
       },
@@ -739,10 +693,158 @@ export const landingZh: LandingDictionary = {
     wantBrand: "希望你的品牌出现在 AG Kit 旁？",
     reachOut: "立即联系",
   },
+  benefits: {
+    eyebrow: "优势",
+    title: "通往生产级 agent 工作的捷径",
+    subtitle:
+      "AG Kit 打包了所需的操作手册、agent 与防护措施，让 AI 编程助手像一支协调的团队，而不是单个聊天窗口。",
+    items: [
+      {
+        title: "更快交付功能",
+        description:
+          "专业 agent 与技能覆盖规划、编码、评审、安全与部署，减少重复造 prompt 的时间。",
+      },
+      {
+        title: "更安全的更新",
+        description:
+          "托管文件清单、三方冲突检测与备份，确保 ag-kit update 不会悄悄覆盖你的本地修改。",
+      },
+      {
+        title: "可持续的工作流",
+        description:
+          "从 /brainstorm 到 /deploy，可复用的命令工作流让团队保持同一流程。",
+      },
+      {
+        title: "内建质量保障",
+        description:
+          "Lint、安全、SEO、性能与测试检查器与技能一同提供，教会 agent 如何使用它们。",
+      },
+    ],
+  },
+  features: {
+    eyebrow: "功能",
+    title: "AG Kit 的不同之处",
+    subtitle:
+      "完整的 agent 能力包，而非单个 prompt 模板——为真实项目与长期安全升级而设计。",
+    items: [
+      {
+        title: "专业 agent",
+        description:
+          "前端、后端、安全、数据库、移动端等——每个都有专注的系统提示与技能组合。",
+      },
+      {
+        title: "领域技能",
+        description:
+          "47 项技能覆盖架构、测试、i18n、SEO、GEO、部署与整洁代码标准。",
+      },
+      {
+        title: "引导式工作流",
+        description:
+          "brainstorm、plan、create、debug、test、preview、status、orchestrate、deploy 等斜杠命令。",
+      },
+      {
+        title: "简单的 CLI",
+        description:
+          "init、update、rollback、status，支持 dry-run、merge/replace 策略与冲突报告。",
+      },
+      {
+        title: "感知合并的更新",
+        description:
+          "SHA-256 基线在写入前区分干净文件、本地修改与真正的三方冲突。",
+      },
+      {
+        title: "与套件同步的文档",
+        description:
+          "安装指南、CLI 参考与本地化示例与工具包版本保持同步。",
+      },
+    ],
+  },
+  workflows: {
+    eyebrow: "工作流",
+    title: "运行你的流程的命令",
+    subtitle: "斜杠工作流将团队经验变成可复用的 agent 会话。",
+    core: "核心",
+    browseAll: "浏览所有工作流",
+    items: [
+      {
+        title: "/brainstorm",
+        description: "在写代码前探索多种方案的优缺点与权衡。",
+      },
+      {
+        title: "/plan",
+        description: "把功能拆解为任务、依赖与验证标准。",
+      },
+      {
+        title: "/create",
+        description: "从自然语言请求搭建全栈应用。",
+      },
+      {
+        title: "/debug",
+        description: "系统化的根因分析与基于证据的修复。",
+      },
+      {
+        title: "/orchestrate",
+        description: "协调并行的专业 agent 处理复杂多领域工作。",
+      },
+      {
+        title: "/deploy",
+        description: "面向生产的发布步骤，内建回滚思维。",
+        highlight: true,
+      },
+    ],
+  },
+  testimonials: {
+    title: "用户评价",
+    subtitle: "来自 GitHub 社区的真实反馈。",
+    items: landingEn.testimonials.items,
+  },
+  contribute: {
+    eyebrow: "贡献",
+    title: "构建 AG Kit 的开发者",
+    subtitle:
+      "感谢每一位贡献代码、文档与想法的人。欢迎在 GitHub 上加入他们。",
+    starLabel: "在 GitHub 上加星",
+    guide: "贡献指南",
+    loading: "正在加载贡献者...",
+    empty: "暂时无法加载贡献者。请访问 GitHub 仓库。",
+    commits: "次提交",
+    viewAll: "查看所有贡献者",
+  },
   faq: {
     eyebrow: "常见问题",
     title: "常见问题",
-    items: landingEn.faq.items,
+    items: [
+      {
+        value: "what",
+        question: "AG Kit 是什么？",
+        answer:
+          "AG Kit 是一个开源工具包，包含 AI agent 技能、专业 agent、工作流，以及能将它们安全安装进项目的 CLI。",
+      },
+      {
+        value: "install",
+        question: "如何安装？",
+        answer:
+          "在项目中运行 npx @vudovn/ag-kit init（或全局安装 CLI）。它会把工具包下载到 .agents 并写入托管文件清单。",
+      },
+      {
+        value: "update",
+        question: "update 会覆盖我的修改吗？",
+        answer:
+          "不会。默认策略是 merge：干净的托管文件自动更新；本地修改被保留；真正的冲突会写入新副本与 JSON 报告，还可以从备份回滚。",
+      },
+      {
+        value: "works-with",
+        question: "哪些 AI 助手可以配合 AG Kit？",
+        answer:
+          "AG Kit 面向能加载项目技能与规则的现代编程 agent（例如 Gemini CLI / Antigravity 类环境）。文档独立于单一厂商的聊天界面。",
+      },
+      {
+        value: "license",
+        question: "免费吗？",
+        answer:
+          "是的。AG Kit 采用 MIT 许可，可商用、可 fork，欢迎回馈改进。",
+      },
+    ],
   },
   footer: {
     ...landingEn.footer,
@@ -813,6 +915,159 @@ export const landingJa: LandingDictionary = {
     coffee: "コーヒーをおごる",
     wantBrand: "ブランドを AG Kit の隣に置きたいですか？",
     reachOut: "連絡する",
+  },
+  benefits: {
+    eyebrow: "メリット",
+    title: "本番品質の agent ワークへの近道",
+    subtitle:
+      "AG Kit はプレイブック、agent、ガードレールをまとめて提供し、AI コーディングアシスタントを単なるチャット窓ではなく連携したチームのように動かします。",
+    items: [
+      {
+        title: "機能をより速く出荷",
+        description:
+          "計画・実装・レビュー・セキュリティ・デプロイを専門 agent とスキルがカバーし、prompt の再発明を減らします。",
+      },
+      {
+        title: "より安全な更新",
+        description:
+          "管理ファイルのマニフェスト、三方向の競合検出、バックアップにより、ag-kit update がローカル編集を静かに消すことはありません。",
+      },
+      {
+        title: "定着するワークフロー",
+        description:
+          "/brainstorm から /deploy まで、再現可能なコマンドワークフローでチームの手順を統一します。",
+      },
+      {
+        title: "品質を標準装備",
+        description:
+          "Lint・セキュリティ・SEO・パフォーマンス・テストのチェッカーが、使い方を教えるスキルと並んで付属します。",
+      },
+    ],
+  },
+  features: {
+    eyebrow: "機能",
+    title: "AG Kit の違い",
+    subtitle:
+      "単一の prompt テンプレートではなく、実プロジェクトと安全なアップグレードのために設計された完全な agent 能力パックです。",
+    items: [
+      {
+        title: "専門 agent",
+        description:
+          "フロントエンド、バックエンド、セキュリティ、データベース、モバイルなど、それぞれ専用のシステムプロンプトとスキルを持ちます。",
+      },
+      {
+        title: "ドメインスキル",
+        description:
+          "アーキテクチャ、テスト、i18n、SEO、GEO、デプロイ、クリーンコードを網羅する 47 のスキル。",
+      },
+      {
+        title: "ガイド付きワークフロー",
+        description:
+          "brainstorm、plan、create、debug、test、preview、status、orchestrate、deploy のスラッシュコマンド。",
+      },
+      {
+        title: "シンプルな CLI",
+        description:
+          "init・update・rollback・status。dry-run、merge/replace 戦略、競合レポートに対応。",
+      },
+      {
+        title: "マージを理解する更新",
+        description:
+          "SHA-256 ベースラインが書き込み前にクリーンなファイル、ローカル編集、真の三方向競合を判別します。",
+      },
+      {
+        title: "キットと同期したドキュメント",
+        description:
+          "インストールガイド、CLI リファレンス、ローカライズ済みの例がツールキットのバージョンと同期します。",
+      },
+    ],
+  },
+  workflows: {
+    eyebrow: "ワークフロー",
+    title: "プロセスを実行するコマンド",
+    subtitle: "スラッシュワークフローが暗黙知を再現可能な agent セッションに変えます。",
+    core: "コア",
+    browseAll: "すべてのワークフローを見る",
+    items: [
+      {
+        title: "/brainstorm",
+        description: "コードを書く前に複数のアプローチを長所・短所とともに検討。",
+      },
+      {
+        title: "/plan",
+        description: "機能をタスク・依存関係・検証基準に分解。",
+      },
+      {
+        title: "/create",
+        description: "自然言語のリクエストからフルスタックアプリを scaffolding。",
+      },
+      {
+        title: "/debug",
+        description: "証拠に基づく修正を伴う体系的な根本原因分析。",
+      },
+      {
+        title: "/orchestrate",
+        description: "複雑な複数ドメインの作業で並列の専門 agent を調整。",
+      },
+      {
+        title: "/deploy",
+        description: "ロールバックを見据えた本番向けリリース手順。",
+        highlight: true,
+      },
+    ],
+  },
+  testimonials: {
+    title: "お客様の声",
+    subtitle: "GitHub コミュニティからの実際のフィードバック。",
+    items: landingEn.testimonials.items,
+  },
+  contribute: {
+    eyebrow: "コントリビュート",
+    title: "AG Kit を作る開発者たち",
+    subtitle:
+      "コード・ドキュメント・アイデアを提供してくれた皆さんに感謝します。GitHub で参加してください。",
+    starLabel: "GitHub でスターを付ける",
+    guide: "コントリビュートガイド",
+    loading: "コントリビューターを読み込み中...",
+    empty: "コントリビューターを読み込めませんでした。GitHub のリポジトリをご覧ください。",
+    commits: "コミット",
+    viewAll: "すべてのコントリビューターを見る",
+  },
+  faq: {
+    eyebrow: "FAQ",
+    title: "よくある質問",
+    items: [
+      {
+        value: "what",
+        question: "AG Kit とは？",
+        answer:
+          "AG Kit は AI agent スキル、専門 agent、ワークフロー、そしてそれらをプロジェクトに安全にインストールする CLI のオープンソースツールキットです。",
+      },
+      {
+        value: "install",
+        question: "インストール方法は？",
+        answer:
+          "プロジェクトで npx @vudovn/ag-kit init を実行します（CLI のグローバルインストールも可）。ツールキットが .agents にダウンロードされ、管理ファイルのマニフェストが書き込まれます。",
+      },
+      {
+        value: "update",
+        question: "update でローカルの変更は上書きされますか？",
+        answer:
+          "いいえ。デフォルトは merge 戦略です。クリーンな管理ファイルは自動更新、ローカル編集は保持、真の競合は新しいコピーと JSON レポートに書き出されます。バックアップからのロールバックも可能です。",
+      },
+      {
+        value: "works-with",
+        question: "どの AI アシスタントで使えますか？",
+        answer:
+          "AG Kit はプロジェクトのスキルとルールを読み込める最新のコーディング agent（Gemini CLI / Antigravity 系の環境など）を対象としています。ドキュメントは特定ベンダーのチャット UI に依存しません。",
+      },
+      {
+        value: "license",
+        question: "無料ですか？",
+        answer:
+          "はい。AG Kit は MIT ライセンスです。商用利用も fork も自由で、改善の還元を歓迎します。",
+      },
+    ],
   },
   footer: {
     ...landingEn.footer,

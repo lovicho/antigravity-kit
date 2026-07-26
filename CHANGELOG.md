@@ -9,6 +9,14 @@ Starting with `2026.5.13`, this project uses calendar versioning in `YYYY.M.D` f
 
 No unreleased changes.
 
+## [2026.7.27] - 2026-07-26
+
+### Fixed
+- CLI exited silently when invoked through an npm bin symlink (`npx @vudovn/ag-kit init` installed nothing): the direct-run guard compared the symlinked `argv[1]` against the ESM real-path `import.meta.url`. The entry path is now resolved through `realpathSync` before comparison.
+
+### Added
+- Regression test running the CLI through a bin-style symlink.
+
 ## [2026.7.26] - 2026-07-26
 
 > Antigravity-native production release: six-phase runtime integration, native tool safety, MCP synchronization, optional plugin packaging, dedicated compatibility CI, and complete operator/release documentation.

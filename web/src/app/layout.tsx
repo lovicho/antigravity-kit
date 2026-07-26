@@ -28,12 +28,29 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://ag-kit.unikorn.vn/",
     siteName: "AG Kit",
-    images: ["/images/logo.png"],
+    images: [
+      {
+        url: "/images/og-image.png",
+        width: 1280,
+        height: 640,
+        alt: "AG Kit — Antigravity agent engineering kit",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AG Kit - AI Agent Capability Expansion Toolkit",
+    description:
+      "Skills, specialist agents, rules, and production-ready workflows for modern AI coding assistants.",
+    images: ["/images/og-image.png"],
   },
 };
 

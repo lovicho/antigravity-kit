@@ -4,18 +4,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { useI18n } from "@/i18n/provider";
 import { cn } from "@/lib/utils";
 
-const AVATARS = [
-  "https://api.dicebear.com/9.x/avataaars/svg?seed=SarahChen",
-  "https://api.dicebear.com/9.x/avataaars/svg?seed=MarcusRodriguez",
-  "https://api.dicebear.com/9.x/avataaars/svg?seed=EmilyWatson",
-  "https://api.dicebear.com/9.x/avataaars/svg?seed=DavidKim",
-  "https://api.dicebear.com/9.x/avataaars/svg?seed=RachelFoster",
-  "https://api.dicebear.com/9.x/avataaars/svg?seed=JamesMitchell",
-  "https://api.dicebear.com/9.x/avataaars/svg?seed=NinaPatel",
-  "https://api.dicebear.com/9.x/avataaars/svg?seed=AlexThompson",
-  "https://api.dicebear.com/9.x/avataaars/svg?seed=HenryGarcia",
-];
-
 function initials(name: string) {
   return name
     .split(" ")
@@ -27,9 +15,10 @@ function initials(name: string) {
 export function LandingTestimonials() {
   const { t } = useI18n();
   const copy = t.landing.testimonials;
-  const reviews = copy.items.map((item, i) => ({
+  // Quotes come from public GitHub issues; names are GitHub logins.
+  const reviews = copy.items.map((item) => ({
     ...item,
-    avatar: AVATARS[i],
+    avatar: `https://github.com/${item.name}.png?size=80`,
   }));
 
   return (
@@ -44,7 +33,7 @@ export function LandingTestimonials() {
           </p>
         </div>
 
-        <div className="relative mt-14 w-full after:pointer-events-none after:absolute after:inset-x-0 after:-bottom-2 after:z-10 after:h-96 after:bg-linear-to-t after:from-background after:to-transparent">
+        <div className="relative mt-14 w-full">
           <div
             className="columns-1 gap-5 md:columns-2 lg:columns-3"
             style={{ columnGap: 20 }}
@@ -78,7 +67,7 @@ export function LandingTestimonials() {
                   </div>
                   <div
                     className={cn(
-                      "leading-7 text-foreground/60",
+                      "leading-7 text-foreground/75",
                       review.clamp,
                     )}
                   >

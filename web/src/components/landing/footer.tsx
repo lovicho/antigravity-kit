@@ -34,18 +34,18 @@ export function LandingFooter() {
 
           <div className="flex flex-col gap-2">
             <h3 className="text-lg font-bold">{f.product}</h3>
-            <Link href="/docs" className="opacity-60 hover:opacity-100">
+            <Link href="/docs" className="opacity-75 hover:opacity-100">
               {f.documentation}
             </Link>
-            <Link href="/docs/agents" className="opacity-60 hover:opacity-100">
+            <Link href="/docs/agents" className="opacity-75 hover:opacity-100">
               {f.agents}
             </Link>
-            <Link href="/docs/skills" className="opacity-60 hover:opacity-100">
+            <Link href="/docs/skills" className="opacity-75 hover:opacity-100">
               {f.skills}
             </Link>
             <Link
               href="/docs/workflows"
-              className="opacity-60 hover:opacity-100"
+              className="opacity-75 hover:opacity-100"
             >
               {f.workflows}
             </Link>
@@ -55,16 +55,16 @@ export function LandingFooter() {
             <h3 className="text-lg font-bold">{f.resources}</h3>
             <Link
               href="/docs/installation"
-              className="opacity-60 hover:opacity-100"
+              className="opacity-75 hover:opacity-100"
             >
               {f.installation}
             </Link>
-            <Link href="/docs/cli" className="opacity-60 hover:opacity-100">
+            <Link href="/docs/cli" className="opacity-75 hover:opacity-100">
               {f.cli}
             </Link>
             <Link
               href="/docs/changelog"
-              className="opacity-60 hover:opacity-100"
+              className="opacity-75 hover:opacity-100"
             >
               {f.changelog}
             </Link>
@@ -76,7 +76,7 @@ export function LandingFooter() {
               href="https://github.com/vudovn/ag-kit"
               target="_blank"
               rel="noopener noreferrer"
-              className="opacity-60 hover:opacity-100"
+              className="opacity-75 hover:opacity-100"
             >
               {f.github}
             </a>
@@ -84,7 +84,7 @@ export function LandingFooter() {
               href="https://github.com/vudovn/ag-kit/issues"
               target="_blank"
               rel="noopener noreferrer"
-              className="opacity-60 hover:opacity-100"
+              className="opacity-75 hover:opacity-100"
             >
               {f.issues}
             </a>
@@ -92,7 +92,7 @@ export function LandingFooter() {
               href="https://github.com/vudovn/ag-kit/discussions"
               target="_blank"
               rel="noopener noreferrer"
-              className="opacity-60 hover:opacity-100"
+              className="opacity-75 hover:opacity-100"
             >
               {f.discussions}
             </a>
@@ -104,7 +104,7 @@ export function LandingFooter() {
               href="https://github.com/vudovn/ag-kit/blob/main/LICENSE"
               target="_blank"
               rel="noopener noreferrer"
-              className="opacity-60 hover:opacity-100"
+              className="opacity-75 hover:opacity-100"
             >
               {f.license}
             </a>
@@ -112,7 +112,7 @@ export function LandingFooter() {
               href="https://github.com/vudovn/ag-kit/blob/main/SECURITY.md"
               target="_blank"
               rel="noopener noreferrer"
-              className="opacity-60 hover:opacity-100"
+              className="opacity-75 hover:opacity-100"
             >
               {f.security}
             </a>

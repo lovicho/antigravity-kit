@@ -13,11 +13,11 @@ export function LandingHero() {
 
   return (
     <section className="container mx-auto w-full px-4 sm:px-6 lg:px-8">
-      <div className="mx-auto grid place-items-center gap-8 py-16 md:py-28 lg:max-w-screen-xl">
+      <div className="mx-auto grid w-full min-w-0 [grid-template-columns:minmax(0,1fr)] place-items-center gap-8 py-16 md:py-28 lg:max-w-screen-xl">
         <div className="space-y-8 text-center">
           <h1 className="mx-auto max-w-screen-md text-4xl font-bold tracking-tight md:text-6xl">
             {hero.title}{" "}
-            <span className="bg-gradient-to-r from-brand to-teal-300 bg-clip-text text-transparent">
+            <span className="text-brand">
               AG Kit
             </span>
           </h1>
@@ -46,7 +46,7 @@ export function LandingHero() {
           </div>
         </div>
 
-        <div className="relative mt-10 w-full max-w-4xl">
+        <div className="relative mt-10 w-full min-w-0 max-w-4xl">
           <div className="absolute top-4 left-1/2 h-40 w-[90%] -translate-x-1/2 rounded-full bg-brand/30 blur-3xl lg:-top-6 lg:h-72" />
           <div className="relative overflow-hidden rounded-xl border border-border border-t-brand/40 bg-code shadow-2xl">
             <div className="flex items-center gap-2 border-b border-code-border bg-code-title px-4 py-3">

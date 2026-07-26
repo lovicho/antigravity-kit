@@ -135,54 +135,10 @@ description: Deploy application to staging
                 </p>
             </section>
 
-            {/* Next Steps */}
-            <section className="mb-12">
-                <h2 className="text-2xl font-bold tracking-tight text-foreground mb-4">
-                    {t.workflowsPage.nextTitle}
-                </h2>
-                <div className="grid gap-4 sm:grid-cols-2">
-                    <Link
-                        href="/docs/cli"
-                        className="group p-6 rounded-lg border border-border hover:border-border hover:bg-muted transition-all"
-                    >
-                        <h3 className="font-semibold text-foreground mb-2">{t.workflowsPage.cliArrow}</h3>
-                        <p className="text-sm text-muted-foreground">
-                            {t.workflowsPage.cliArrowDesc}
-                        </p>
-                    </Link>
-                    <Link
-                        href="/docs/agents"
-                        className="group p-6 rounded-lg border border-border hover:border-border hover:bg-muted transition-all"
-                    >
-                        <h3 className="font-semibold text-foreground mb-2">{t.workflowsPage.backAgentsArrow}</h3>
-                        <p className="text-sm text-muted-foreground">
-                            {t.workflowsPage.backAgentsArrowDesc}
-                        </p>
-                    </Link>
-                </div>
-            </section>
+            
 
-            {/* Footer Navigation */}
-            <div className="pt-8 border-t border-border flex items-center justify-between">
-                <Link
-                    href="/docs/skills"
-                    className="text-sm font-medium text-foreground hover:underline flex items-center gap-1"
-                >
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                    </svg>
-                    {t.workflowsPage.footerSkills}
-                </Link>
-                <Link
-                    href="/docs/cli"
-                    className="text-sm font-medium text-foreground hover:underline flex items-center gap-1"
-                >
-                    {t.workflowsPage.footerCli}
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                </Link>
-            </div>
+
+            
         </div>
     );
 }

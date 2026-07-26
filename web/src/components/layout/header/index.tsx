@@ -44,12 +44,6 @@ export default function Header() {
                                     GitHub
                                 </Button>
                             </Link>
-                            {/* <Link href="https://discord.gg/CwpvDdFK" target="_blank" rel="noopener noreferrer">
-                                <Button variant="outline" className="hidden md:flex">
-                                    <DiscordIcon />
-                                    Discord
-                                </Button>
-                            </Link> */}
                             <Link href="https://unikorn.vn/" target="_blank" rel="noopener noreferrer">
                                 <Button variant="outline" className="hidden md:flex">
                                     <svg

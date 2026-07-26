@@ -16,7 +16,7 @@ export default function DonateDialog({ className }: DonateDialogProps) {
     return (
         <Dialog>
             <DialogTrigger render={<Button variant="outline" className={className} />}>
-                <Heart className="w-3 h-3 mr-1.5 text-red-500" />
+                <Heart className="w-3 h-3 mr-1.5 text-brand" />
                 Donate
             </DialogTrigger>
             <DialogContent className="sm:max-w-md">
@@ -38,8 +38,8 @@ export default function DonateDialog({ className }: DonateDialogProps) {
                         rel="noopener noreferrer"
                         className="flex items-center gap-3 p-4 rounded-lg border border-border hover:border-border hover:bg-muted transition-all group"
                     >
-                        <div className="flex items-center justify-center w-10 h-10 rounded-full bg-amber-100 dark:bg-amber-900/20">
-                            <CoffeeIcon className="w-5 h-5 text-amber-600 dark:text-amber-500" />
+                        <div className="flex items-center justify-center w-10 h-10 rounded-full bg-brand/10">
+                            <CoffeeIcon className="w-5 h-5 text-brand" />
                         </div>
                         <div className="flex-1">
                             <div className="font-semibold text-foreground mb-0.5">Buy Me a Coffee</div>
@@ -55,8 +55,8 @@ export default function DonateDialog({ className }: DonateDialogProps) {
                         onClick={() => setShowQR(!showQR)}
                         className="w-full flex items-center gap-3 p-4 rounded-lg border border-border hover:border-border hover:bg-muted transition-all group text-left"
                     >
-                        <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/20">
-                            <QrCodeIcon className="w-5 h-5 text-blue-600 dark:text-blue-500" />
+                        <div className="flex items-center justify-center w-10 h-10 rounded-full bg-brand/10">
+                            <QrCodeIcon className="w-5 h-5 text-brand" />
                         </div>
                         <div className="flex-1">
                             <div className="font-semibold text-foreground mb-0.5">Bank Transfer</div>
@@ -96,26 +96,6 @@ export default function DonateDialog({ className }: DonateDialogProps) {
                         </div>
                     )}
 
-                    {/* Hire Me Option */}
-                    {/* <a
-                        href="https://www.linkedin.com/in/vudovn" // Assuming this link based on username, user can update
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-3 p-4 rounded-lg border border-border hover:border-brand/40 hover:bg-brand/5 transition-all group"
-                    >
-                        <div className="flex items-center justify-center w-10 h-10 rounded-full bg-indigo-100 dark:bg-indigo-900/20">
-                            <span className="text-xl">
-                                <User />
-                            </span>
-                        </div>
-                        <div className="flex-1">
-                            <div className="font-semibold text-foreground mb-0.5">Hire Me!</div>
-                            <div className="text-sm text-muted-foreground">View my profile & portfolio</div>
-                        </div>
-                        <svg className="w-5 h-5 text-muted-foreground group-hover:text-brand transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-                    </a> */}
                 </div>
 
                 <DialogFooter>

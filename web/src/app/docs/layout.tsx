@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import DocsSidebar from "@/components/docs/sidebar";
+import DocsPager from "@/components/docs/pager";
 import Toc from "@/components/docs/toc";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
@@ -29,6 +30,7 @@ export default function DocsLayout({
                     {/* Main Content Area */}
                     <main id="main-content" tabIndex={-1} className="flex-1 min-w-0 py-8 lg:py-10 max-w-4xl">
                         {children}
+                        <DocsPager />
                     </main>
 
                     {/* Right Sidebar - Table of Contents */}

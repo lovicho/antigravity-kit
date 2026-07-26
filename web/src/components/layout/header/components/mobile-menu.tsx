@@ -8,40 +8,7 @@ import { GithubIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useI18n } from '@/i18n/provider';
 
-type SearchKey =
-    | 'groupGettingStarted'
-    | 'groupCoreConcepts'
-    | 'cliReference'
-    | 'introduction'
-    | 'installation'
-    | 'agents'
-    | 'skills'
-    | 'workflows'
-    | 'commandsOptions';
-
-const navSections: { titleKey: SearchKey; items: { href: string; labelKey: SearchKey }[] }[] = [
-    {
-        titleKey: 'groupGettingStarted',
-        items: [
-            { href: '/docs', labelKey: 'introduction' },
-            { href: '/docs/installation', labelKey: 'installation' },
-        ],
-    },
-    {
-        titleKey: 'groupCoreConcepts',
-        items: [
-            { href: '/docs/agents', labelKey: 'agents' },
-            { href: '/docs/skills', labelKey: 'skills' },
-            { href: '/docs/workflows', labelKey: 'workflows' },
-        ],
-    },
-    {
-        titleKey: 'cliReference',
-        items: [
-            { href: '/docs/cli', labelKey: 'commandsOptions' },
-        ],
-    },
-];
+import { docsNav } from '@/lib/docs-nav';
 
 export default function MobileMenu() {
     const [isOpen, setIsOpen] = useState(false);
@@ -70,10 +37,10 @@ export default function MobileMenu() {
                 <div className="lg:hidden absolute left-0 right-0 top-full border-t border-border bg-background shadow-lg animate-in slide-in-from-top-2 max-h-[calc(100vh-3.5rem)] overflow-y-auto">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
                         <nav className="space-y-6">
-                            {navSections.map((section) => (
-                                <div key={section.titleKey}>
+                            {docsNav.map((section) => (
+                                <div key={section.title}>
                                     <h3 className="mb-3 text-sm font-semibold text-foreground">
-                                        {t.search[section.titleKey]}
+                                        {(section.titleKey && (t.search as unknown as Record<string, string>)[section.titleKey]) || section.title}
                                     </h3>
                                     <div className="space-y-1">
                                         {section.items.map((item) => {
@@ -91,7 +58,7 @@ export default function MobileMenu() {
                                                         }
                                                     `}
                                                 >
-                                                    {t.search[item.labelKey]}
+                                                    {(item.labelKey && (t.search as unknown as Record<string, string>)[item.labelKey]) || item.label}
                                                 </Link>
                                             );
                                         })}

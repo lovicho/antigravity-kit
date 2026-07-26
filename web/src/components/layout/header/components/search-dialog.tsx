@@ -23,75 +23,12 @@ import {
 import { Kbd, KbdGroup } from '@/components/ui/kbd';
 import { useI18n } from '@/i18n/provider';
 
-interface SearchItem {
-    value: string;
-    labelKey: 'introduction' | 'installation' | 'agents' | 'skills' | 'workflows' | 'cliReference';
-    href: string;
-    keywords?: string;
-}
+import { docsNav, type DocsNavItem, type DocsNavSection } from '@/lib/docs-nav';
 
-interface SearchGroup {
-    value: string;
-    labelKey: 'groupGettingStarted' | 'groupCoreConcepts' | 'groupReference';
-    items: SearchItem[];
-}
+type SearchItem = DocsNavItem;
+type SearchGroup = DocsNavSection;
 
-const searchGroups: SearchGroup[] = [
-    {
-        value: 'Getting Started',
-        labelKey: 'groupGettingStarted',
-        items: [
-            {
-                labelKey: 'introduction',
-                value: 'introduction',
-                href: '/docs',
-                keywords: 'getting started overview what is'
-            },
-            {
-                labelKey: 'installation',
-                value: 'installation',
-                href: '/docs/installation',
-                keywords: 'install setup init npm npx global cli'
-            },
-        ],
-    },
-    {
-        value: 'Core Concepts',
-        labelKey: 'groupCoreConcepts',
-        items: [
-            {
-                labelKey: 'agents',
-                value: 'agents',
-                href: '/docs/agents',
-                keywords: 'specialist personas orchestrator planner security backend frontend'
-            },
-            {
-                labelKey: 'skills',
-                value: 'skills',
-                href: '/docs/skills',
-                keywords: 'knowledge modules react nextjs tailwind patterns testing'
-            },
-            {
-                labelKey: 'workflows',
-                value: 'workflows',
-                href: '/docs/workflows',
-                keywords: 'slash commands brainstorm create debug deploy enhance'
-            },
-        ],
-    },
-    {
-        value: 'Reference',
-        labelKey: 'groupReference',
-        items: [
-            {
-                labelKey: 'cliReference',
-                value: 'cli',
-                href: '/docs/cli',
-                keywords: 'command line interface init update status options'
-            },
-        ],
-    },
-];
+const searchGroups: SearchGroup[] = docsNav;
 
 export default function SearchDialog() {
     const [open, setOpen] = useState(false);
@@ -168,18 +105,18 @@ export default function SearchDialog() {
                         </CommandEmpty>
                         <CommandList>
                             {(group: SearchGroup) => (
-                                <Fragment key={group.value}>
+                                <Fragment key={group.title}>
                                     <CommandGroup items={group.items}>
-                                        <CommandGroupLabel>{t.search[group.labelKey]}</CommandGroupLabel>
+                                        <CommandGroupLabel>{(group.titleKey && (t.search as unknown as Record<string, string>)[group.titleKey]) || group.title}</CommandGroupLabel>
                                         <CommandCollection>
                                             {(item: SearchItem) => (
                                                 <CommandItem
-                                                    key={item.value}
+                                                    key={item.href}
                                                     onClick={() => handleItemClick(item)}
-                                                    value={item.value + ' ' + (item.keywords || '')}
+                                                    value={item.label + ' ' + (item.keywords || '')}
                                                 >
                                                     <FileTextIcon className="mr-2 h-4 w-4 text-muted-foreground" />
-                                                    <span className="flex-1">{t.search[item.labelKey]}</span>
+                                                    <span className="flex-1">{(item.labelKey && (t.search as unknown as Record<string, string>)[item.labelKey]) || item.label}</span>
                                                     <span className="text-xs text-muted-foreground">{item.href}</span>
                                                 </CommandItem>
                                             )}

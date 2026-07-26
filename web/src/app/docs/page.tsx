@@ -108,52 +108,10 @@ export default function DocsPage() {
                 </p>
             </section>
 
-            {/* Next Steps */}
-            <section className="mb-12">
-                <h2 className="text-2xl font-bold tracking-tight text-foreground mb-4">
-                    {t.docsHome.nextStepsTitle}
-                </h2>
-                <div className="grid gap-4 sm:grid-cols-2">
-                    <Link
-                        href="/docs/installation"
-                        className="group p-6 rounded-lg border border-border hover:border-border hover:bg-muted transition-all"
-                    >
-                        <div className="flex items-center justify-between mb-2">
-                            <h3 className="font-semibold text-foreground">{t.docsHome.installationArrow}</h3>
-                        </div>
-                        <p className="text-sm text-muted-foreground">
-                            {t.docsHome.installationArrowDesc}
-                        </p>
-                    </Link>
-                    <Link
-                        href="/docs/agents"
-                        className="group p-6 rounded-lg border border-border hover:border-border hover:bg-muted transition-all"
-                    >
-                        <div className="flex items-center justify-between mb-2">
-                            <h3 className="font-semibold text-foreground">{t.docsHome.learnCoreArrow}</h3>
-                        </div>
-                        <p className="text-sm text-muted-foreground">
-                            {t.docsHome.learnCoreArrowDesc}
-                        </p>
-                    </Link>
-                </div>
-            </section>
+            
 
-            {/* Footer Navigation */}
-            <div className="pt-8 border-t border-border flex items-center justify-between">
-                <div className="text-sm text-muted-foreground">
-                    {t.docsHome.footerGettingStarted}
-                </div>
-                <Link
-                    href="/docs/installation"
-                    className="text-sm font-medium text-foreground hover:underline flex items-center gap-1"
-                >
-                    {t.docsHome.footerInstallation}
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                </Link>
-            </div>
+
+            
         </div>
     );
 }

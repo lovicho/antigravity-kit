@@ -163,54 +163,10 @@ export default function SkillsPage() {
                 </div>
             </section>
 
-            {/* Next Steps */}
-            <section className="mb-12">
-                <h2 className="text-2xl font-bold tracking-tight text-foreground mb-4">
-                    {t.skillsPage.nextTitle}
-                </h2>
-                <div className="grid gap-4 sm:grid-cols-2">
-                    <Link
-                        href="/docs/workflows"
-                        className="group p-6 rounded-lg border border-border hover:border-border hover:bg-muted transition-all"
-                    >
-                        <h3 className="font-semibold text-foreground mb-2">{t.skillsPage.workflowsArrow}</h3>
-                        <p className="text-sm text-muted-foreground">
-                            {t.skillsPage.workflowsArrowDesc}
-                        </p>
-                    </Link>
-                    <Link
-                        href="/docs/cli"
-                        className="group p-6 rounded-lg border border-border hover:border-border hover:bg-muted transition-all"
-                    >
-                        <h3 className="font-semibold text-foreground mb-2">{t.skillsPage.cliArrow}</h3>
-                        <p className="text-sm text-muted-foreground">
-                            {t.skillsPage.cliArrowDesc}
-                        </p>
-                    </Link>
-                </div>
-            </section>
+            
 
-            {/* Footer Navigation */}
-            <div className="pt-8 border-t border-border flex items-center justify-between">
-                <Link
-                    href="/docs/agents"
-                    className="text-sm font-medium text-foreground hover:underline flex items-center gap-1"
-                >
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                    </svg>
-                    {t.skillsPage.footerAgents}
-                </Link>
-                <Link
-                    href="/docs/workflows"
-                    className="text-sm font-medium text-foreground hover:underline flex items-center gap-1"
-                >
-                    {t.skillsPage.footerWorkflows}
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                </Link>
-            </div>
+
+            
         </div>
     );
 }
