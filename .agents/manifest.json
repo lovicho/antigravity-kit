@@ -323,7 +323,7 @@
       "path": "agent/project-planner.md",
       "requires": {
         "skills": {
-          "app-builder": "^1.0.0",
+          "app-builder": "^1.1.0",
           "brainstorming": "^1.0.0",
           "clean-code": "^2.0.0",
           "plan-writing": "^1.0.0"
@@ -550,7 +550,7 @@
       ],
       "path": "skills/app-builder/SKILL.md",
       "scripts": [],
-      "version": "1.0.0"
+      "version": "1.1.0"
     },
     "architecture": {
       "allowedTools": [
