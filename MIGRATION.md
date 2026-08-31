@@ -1,10 +1,22 @@
-# Migrating to the Antigravity-native release
+# Migrating AG Kit
 
-This guide covers upgrades from AG Kit `2026.7.18` or earlier to `2026.7.26`.
+This guide covers upgrades across AG Kit releases, including the Antigravity-native runtime layer and subsequent feature releases up to `2026.8.31`.
 
-## What changes
+## Upgrading to `2026.8.31`
 
-The existing agents, skills, rules, workflows, and memory files remain compatible. The release adds an Antigravity runtime layer:
+### What changes in `2026.8.31`
+- **Design Gatekeeper**: `app-builder` now requires a `DESIGN.md` (visual language tokens and rationale) at the project root before frontend implementation begins.
+- **AI & Game Application Support**: Added detection for full-stack AI/Chatbot apps (Vercel AI SDK streaming, pgvector) and routed Game development to `game-developer`.
+- **Template & CSS Paths**: Standardized `src/app/globals.css` across Next.js templates and updated `@prisma/client` runtime dependencies.
+- **Web & SEO**: Schema.org JSON-LD structured data (`SoftwareApplication`, `FAQPage`), Web App Manifest, and custom 404 page.
+
+All existing user code, custom agents, and modified skills are preserved by `ag-kit update` using the default merge strategy.
+
+---
+
+## Migrating to the Antigravity-native runtime (`2026.7.26`+)
+
+The release adds an Antigravity runtime layer:
 
 - `.agents/antigravity.json` — machine-readable runtime contract;
 - `.agents/hooks.json` — native Antigravity hook registration;
@@ -12,6 +24,7 @@ The existing agents, skills, rules, workflows, and memory files remain compatibl
 - Antigravity-specific CI and production documentation.
 
 The only behavior enabled by default is a narrow `PreToolUse` safety gate for the `run_command` tool. It blocks high-confidence root/disk destructive commands and allows ordinary project cleanup.
+
 
 ## Before upgrading
 
