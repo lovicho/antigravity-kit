@@ -1,6 +1,6 @@
 {
   "name": "web",
-  "version": "2026.7.27",
+  "version": "2026.8.31",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -42,6 +42,7 @@
     "typescript": "^5"
   },
   "overrides": {
+    "nanoid": "^3.3.18",
     "postcss": "8.5.23",
     "sharp": "0.35.3"
   }

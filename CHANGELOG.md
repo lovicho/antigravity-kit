@@ -9,7 +9,31 @@ Starting with `2026.5.13`, this project uses calendar versioning in `YYYY.M.D` f
 
 No unreleased changes.
 
+## [2026.8.31] - 2026-08-31
+
+### Added
+- Embedded mandatory `DESIGN.md` (Design Source-of-Truth) gate into `app-builder` orchestration pipeline, scaffolding structure, and Next.js templates.
+- Added 2026 AI Application Pattern (Vercel AI SDK streaming, PostgreSQL `pgvector`, vector search, LLM API rate limiting) and SQL-first Drizzle ORM options in `tech-stack.md`.
+- Added project type detection for AI/Chatbot applications and Game applications (`game-development` skill routing).
+- Integrated automatic preview verification (`auto_preview.py`) into iterative enhancement and DevOps handoff.
+- Added Schema.org JSON-LD structured data (`SoftwareApplication`, `WebSite`, `FAQPage`), Web App Manifest, and branded 404 page for the docs site.
+
+### Changed
+- Advanced toolkit version to `2026.8.31` across all packages, locks, and manifest.
+- Bumped `app-builder` skill version to `1.1.0`.
+- Standardized `globals.css` path to `src/app/globals.css` across Next.js templates.
+- Fixed Express API template dependencies to include `@prisma/client` in dependencies and `prisma` as devDependency.
+- Updated the `mcp-builder` skill for the stable MCP `2026-07-28` specification: stateless per-request metadata, `server/discover`, explicit state handles, extension negotiation, JSON Schema 2020-12, compatibility behavior, and migration guidance for deprecated features.
+- Reworked the orchestrator and `parallel-agents` guidance around Antigravity-native agents and tasks while retaining best-effort portability for other runtimes.
+
+### Security
+- Resolved `nanoid` security advisory `GHSA-2v37-7h3g-55p8` via package overrides.
+- Added required safeguards for external `$ref` resolution, schema-validation resource limits, untrusted tool annotations, explicit consent, least privilege, secret handling, and execution isolation.
+- Added explicit trust boundaries for repository content, MCP responses, tool annotations, web content, logs, and subagent outputs.
+- Added finite agent, delegation-depth, turn/retry, timeout, cancellation, and no-progress controls to prevent recursive delegation and indefinite ReAct loops.
+
 ## [2026.7.27] - 2026-07-26
+
 
 ### Fixed
 - CLI exited silently when invoked through an npm bin symlink (`npx @vudovn/ag-kit init` installed nothing): the direct-run guard compared the symlinked `argv[1]` against the ESM real-path `import.meta.url`. The entry path is now resolved through `realpathSync` before comparison.
